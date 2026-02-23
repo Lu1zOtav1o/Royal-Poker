@@ -1,5 +1,5 @@
 ♠️ Royal Poker – Texas Hold'em Multiplayer
-Projeto desenvolvido para a disciplina APS (Análise e Projeto de Sistemas) do curso de Análise e Desenvolvimento de Sistemas do Instituto Federal da Bahia – Câmpus Ilhéus, sob orientação do professor Ciro Esteves Lima Sobral.
+Projeto desenvolvido para a disciplina APS (Análise e Projeto de Sistemas) do curso de Informática do Instituto Federal da Bahia – Câmpus Ilhéus, sob orientação do professor Ciro Esteves Lima Sobral.
 
 👥 Equipe
 Alício da Silva Cruz
