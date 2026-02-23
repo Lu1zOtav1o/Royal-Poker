@@ -1,0 +1,334 @@
+/* src/App.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a472a; /* verde mesa */
+  color: white;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: gold;
+  margin-bottom: 30px;
+}
+
+.lobby {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.create-room, .join-room {
+  background-color: #2a5a3a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.create-room h2, .join-room h2 {
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #ffd700;
+  color: #1a472a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #e6c200;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  background-color: #ff4444;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.game-table {
+  background-color: #0f3b1f;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  min-height: 600px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.players-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.player-seat {
+  background-color: #2d5a3a;
+  border: 2px solid #b8860b;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 150px;
+  text-align: center;
+  position: relative;
+}
+
+.player-seat.folded {
+  opacity: 0.5;
+}
+
+.player-seat.me {
+  border-color: #ffd700;
+  box-shadow: 0 0 10px gold;
+}
+
+.player-name {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.player-stack {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.player-cards {
+  min-height: 40px;
+  margin: 5px 0;
+}
+
+.card {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  margin: 0 2px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+.card.back {
+  background-color: #333;
+  color: white;
+}
+
+.player-bet {
+  background-color: rgba(0,0,0,0.3);
+  padding: 3px;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+
+.dealer-button {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: gold;
+  color: black;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.community-cards {
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #1e4d2b;
+  border-radius: 10px;
+}
+
+.actions {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.chat-section {
+  margin-top: 30px;
+  border-top: 1px solid #b8860b;
+  padding-top: 20px;
+}
+
+.messages {
+  background-color: #1e3b2a;
+  border-radius: 8px;
+  padding: 10px;
+  height: 150px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.messages div {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.time {
+  color: #aaa;
+  font-size: 0.8em;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  background-color: #2d5a3a;
+  color: white;
+  border: 1px solid #b8860b;
+}
+
+.chat-input input::placeholder {
+  color: #aaa;
+}
+
+.start-game {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Botão de tutorial na tela inicial */
+.tutorial-button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.tutorial-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.tutorial-button:hover {
+  background-color: #357ab8;
+}
+
+/* Modal do tutorial */
+.tutorial-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.tutorial-content {
+  background-color: #2a5a3a;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 0 20px gold;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: gold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.close-button:hover {
+  color: white;
+}
+.tutorial-content h2 {
+  color: gold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.tutorial-content h3 {
+  color: #ffd700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.tutorial-content p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.hand-ranking {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+.hand-ranking th, .hand-ranking td {
+  border: 1px solid #b8860b;
+  padding: 8px;
+  text-align: left;
+}
+.hand-ranking th {
+  background-color: #b8860b;
+  color: black;
+}
+.hand-ranking td {
+  background-color: #1e4d2b;
+}
+.got-it-button {
+  background-color: gold;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+.got-it-button:hover {
+  background-color: #e6c200;
+}
